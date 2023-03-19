@@ -9,7 +9,10 @@ const mondayWork = function (mondayActivity = 'go to the office') {
 }
 
 function wrapAdjective(outerP = '*') {
-    return result = function(innerP = 'special') {
+    return function(innerP = 'special') {
         return `You are ${outerP}${innerP}${outerP}!`;
     }
 }
+
+let result = wrapAdjective('||');
+let emphatic = result('a dedicated programmer');
